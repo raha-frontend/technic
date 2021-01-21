@@ -40,28 +40,28 @@ body {
     height: 106px;
 }
 
-.header-left {
+.header__left {
     display: flex;
     justify-content: space-between;
     position: relative;
     height: 100%;
 }
 
-.header-top-link {
+.header__top-link {
     position: absolute;
     background-repeat: no-repeat;
     transition: transform 0.3s linear;
 }
 
-.header-top-link:hover {
+.header__top-link:hover {
     transform: scale(1.3);
 }
 
-.header-logo {
+.header__logo-image {
     display: block;
 }
 
-.home-icon {
+.header__top-link_home {
     background-image: url(./images/header-home-icon.png);
     width: 13px;
     height: 13px;
@@ -69,7 +69,7 @@ body {
     left: 400px;
 }
 
-.message-icon {
+.header__top-link_message {
     background-image: url(./images/header-message-icon.png);
     width: 14px;
     height: 10px;
@@ -77,7 +77,7 @@ body {
     left: 426px;
 }
 
-.user-icon {
+.header__top-link_user {
     background-image: url(./images/header-user-icon.png);
     width: 13px;
     height: 12px;
@@ -85,56 +85,56 @@ body {
     left: 452px;
 }
 
-.logo-link {
+.header__logo {
     margin-right: 16px;
 }
 
-.about-company {
+.header-menu {
     display: flex;
     height: 23px;
     margin-top: 46px;
 }
 
-.about-company-item {
+.header-menu__item {
     padding: 3px 16px;
     border-right: 1px solid #cccece;
 }
 
-.about-company-item:last-child {
+.header-menu__item:last-child {
     border-right: none;
     padding-right: 0;
 }
 
-.about-company-link {
+.header-menu__link {
     display: block;
     font-size: 12px;
     color: #3d3d3d;
 }
 
-.about-company-link.active {
+.header-menu__link.active {
     color: #af2c2c;
 }
 
-.about-company-link:hover {
+.header-menu__link:hover {
     color: #cf3232;
 }
 
-.header-right {
+.header-contacts {
     height: 100%;
     padding: 0 60px;
 }
 
-.yahho-link {
+.header-contacts__email {
     font-size: 12px;
     color: #a72c2c;
     margin: 0 0 7px 0;
 }
 
-.yahho-link:hover {
+.header-contacts__email:hover {
     color: #cf3232;
 }
 
-.header-span {
+.header-contacts__title {
     display: block;
     font-size: 12px;
     color: #a0a0a0;
@@ -150,18 +150,18 @@ body {
     justify-content: space-between;
 }
 
-.tel {
+.header-contacts__phone {
     font-size: 18px;
     font-weight: 700;
     color: #cf3232;
     margin-bottom: 7px;
 }
 
-.tel:hover {
+.header-contacts__phone:hover {
     color: #a72c2c;
 }
 
-.phone-one {
+.header-contacts__phones_work {
     margin-right: 22px;
 }
 
@@ -187,16 +187,16 @@ body {
     color: #cf3232;
 }
 
-.main-menu-link {
+.main-menu__link {
     color: inherit;
 }
 
-.main-menu-link img {
+.main-menu__image {
     display: block;
     height: 76px;
 }
 
-.main-menu-text {
+.main-menu__text {
     display: block;
     font-size: 11px;
     text-align: center;
@@ -208,7 +208,7 @@ body {
     margin-bottom: 10px;
 }
 
-.services-item {
+.services-menu__item {
     width: 24.8%;
     height: 62px;
     background: linear-gradient(#be4a4a, #8a1818);
@@ -216,7 +216,7 @@ body {
     border-radius: 3px;
 }
 
-.services-link {
+.services-menu__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,21 +229,22 @@ body {
     background-color: inherit;  
 }
 
-.services-link img {
+.services-menu__image {
     display: block;
     margin-right: 10px;
 }
 
-.services-link span {
+.services-menu__text {
     display: block;
 }
 
-.services-item:hover {
+.services-menu__item:hover {
     background-color:#ce4646;
 }
 
-.services-link:hover {
+.services-menu__link:hover {
     text-decoration: none;
+    border-radius: 3px;
 }
 
 .slider {
@@ -339,6 +340,10 @@ body {
     position: relative;
 }
 
+.content-item.content-item-first:before {
+    top: 8px;
+}
+
 .content-item:first-child {
     margin-bottom: 0;
 }
@@ -367,10 +372,11 @@ body {
 
 .content-span {
     display: block;
+    margin-left: -15px;
     margin-bottom: 15px;
 }
 
-.company {
+.manufacturer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -379,75 +385,76 @@ body {
     margin-bottom: 20px;    
 }
 
-.company-link {
+.manufacturer__link {
     padding: 25px;
     filter: grayscale(1);
 }
 
-.company-link:hover {
+.manufacturer__link:hover {
     transform: scale(1.1);
     transition: transform 0.3s linear;
     filter: grayscale(0);
 }
 
-.company-link.active {
+.manufacturer__link.active {
     filter: grayscale(0);
+    transform: scale(1);
 }
 
-.company-logo {
+.manufacturer__logo {
     display: block;
 }
 
-.services-company {
+.footer-menu {
     display: flex;
     margin-bottom: 12px;
 }
 
-.services-company-block {
+.footer-menu_about {
     min-width: 130px;
     padding-left: 25px;
 }
 
-.services-company-block:first-child {
+.footer-menu_about:first-child {
     padding-left: 0;
 }
 
-.services-company-title2 {
+.footer-menu_about2 {
     min-width: 153px;
 }
 
-.news-company-block {
+.footer-menu_about3 {
     min-width: 165px;
 }
 
-.technic-company-block {
+.footer-menu_about4 {
     min-width: 162px;
 }
 
-.contacts-company-block {
+.footer-menu_about5 {
     min-width: 158px;
 }
 
-.services-company-title {
+.footer-menu__title {
     font-size: 10px;
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
-.services-company-title-link {
+.footer-menu__title-link {
     color: #5d5d5d;
 }
 
-.services-company-title-link.active {
+.footer-menu__title-link.active {
     color: #c32f2f;
 }
 
-.services-company-title-link:hover {
+.footer-menu__title-link:hover {
     color: #de2020;
 }
 
-.services-company-list {
+.footer-menu__list {
     min-height: 140px;
     border-right: 1px solid #dedede;
 }
@@ -456,26 +463,26 @@ body {
     border-right: none;
 }
 
-.services-company-item {
+.footer-menu__item {
     padding: 7px 0;
 }
 
-.services-company-link {
+.footer-menu__link {
     font-size: 11px;
     color: #5d5d5d;
 }
 
-.services-company-link:hover {
+.footer-menu__link:hover {
     color: #de2020;
 }
 
-.services-company-link.active {
+.footer-menu__link.active {
     position: relative;
     padding-left: 10px;
     color: #c32f2f;
 }
 
-.services-company-link.active::before {
+.footer-menu__link.active::before {
     content: "";
     position: absolute;
     background-color: #c32f2f;
@@ -485,4 +492,48 @@ body {
     left: 2px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    filter: grayscale(1);
+    margin-bottom: 20px;
+}
+
+.copy {
+    font-size: 12px;
+}
+
+.footer-middle {
+    display: flex;
+    align-items: flex-end;
+}
+
+.call-us-span {
+    display: block;
+    font-size: 12px;
+}
+
+.footer-tel {
+    font-size: 18px;
+}
+
+.footer-tel-1 {
+    margin-right: 27px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer-box {
+    width: 88px;
+    height: 31px;
+    border: 1px solid #9a9a9a;
+}
+
+.footer-box-1 {
+    margin-right: 16px;
 }
