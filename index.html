@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>Technic</title>
 </head>
@@ -122,10 +123,19 @@
             </li>
         </ul>
 
-        <div class="slider">
-            <img src="./images/slider.jpg" alt="slider" class="slider-img">
-            <!-- <span class="slider-text slider-span-1">Уникальное</span>
-            <span class="slider-text slider-span-2">Спецпредложение!</span> -->
+        <div class="owl-carousel slider">
+            <div>
+                <img src="./images/slider.jpg" alt="slider" class="slider-img">
+            </div>
+            <div>
+                <img src="./images/slider.jpg" alt="slider" class="slider-img">
+            </div>
+            <div>
+                <img src="./images/slider.jpg" alt="slider" class="slider-img">
+            </div>
+            <div>
+                <img src="./images/slider.jpg" alt="slider" class="slider-img">
+            </div>
         </div>
 
         <div class="main-content">
@@ -327,5 +337,15 @@
         </div>
 
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items: 1
+            });
+        });
+    </script>
 </body>
 </html>
